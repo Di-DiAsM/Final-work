@@ -27,7 +27,6 @@ for (int i = 0; i < array.Length; i++)
 Console.Write(string.Join(" ", newArray));
 
 
-
 //*****************************************************************************
 // void PrintArray(string[] array)
 // {
