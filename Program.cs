@@ -14,44 +14,45 @@ Console.Clear();
 //*********************************************************************************************************************
 //Вариант 1. 
 
-// //string[] array = { "Hello", "2", "world", ":-)" };
-// string[] array = { "1234", "1567", "-2", "computer science" };
-// //string[] array = {"Russia", "Denmark", "Kazan"};
-
-// string[] newArray = new string [array.Length];
-
-// for (int i = 0; i < array.Length; i++)
-// {
-//     if (array[i].Length <= 3)
-//     {
-//         newArray[i] = array[i];
-//     }
-// }
-
-// Console.Write(string.Join(" ", newArray));
-
-
-//*********************************************************************************************************************
-//Вариант 2. 
-
 string[] array = { "Hello", "2", "world", ":-)" };
 //string[] array = { "1234", "1567", "-2", "computer science" };
 //string[] array = {"Russia", "Denmark", "Kazan"};
 
 
-string[] newArray = new string [0];
-
+string[] newArray = new string [array.Length];
 
 for (int i = 0; i < array.Length; i++)
 {
     if (array[i].Length <= 3)
     {
-        Array.Resize(ref newArray, newArray.Length + 1);
-        newArray[newArray.Length - 1] = array[i];
+        newArray[i] = array[i];
     }
 }
 
 Console.Write(string.Join(" ", newArray));
+
+
+//*********************************************************************************************************************
+//Вариант 2. более оптимизированный вариант 
+
+// string[] array = { "Hello", "2", "world", ":-)" };
+// //string[] array = { "1234", "1567", "-2", "computer science" };
+// //string[] array = {"Russia", "Denmark", "Kazan"};
+
+
+// string[] newArray = new string [0];
+
+
+// for (int i = 0; i < array.Length; i++)
+// {
+//     if (array[i].Length <= 3)
+//     {
+//         Array.Resize(ref newArray, newArray.Length + 1);
+//         newArray[newArray.Length - 1] = array[i];
+//     }
+// }
+
+// Console.Write(string.Join(" ", newArray));
 
 
 //*****************************************************************************
